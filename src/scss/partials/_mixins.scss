@@ -1,0 +1,24 @@
+
+@mixin flexSB {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flexSA {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin bgi {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}

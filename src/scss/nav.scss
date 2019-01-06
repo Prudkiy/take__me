@@ -1,0 +1,79 @@
+@import "partials/media";
+@import "partials/mixins";
+@import "partials/params";
+
+.nav {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 7px #444444;
+    &__left {
+        height: $heightNav;
+        flex-grow: 1;
+        background-color: #fff;
+    }
+    &__right {
+        height: $heightNav;
+        flex-grow: 1;
+        background-color: rgba(255,255,255,0.7);
+    }
+    &__wrap {
+        @include flexSB;
+        margin: 0 auto;
+        
+    }
+    &__logo {
+        height: $heightNav;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(to right, rgba(255,255,255,1) 70%,rgba(255,255,255,0.7) 100%,rgba(255,255,255,0.7) 100%);
+            img {
+                width: 146px;
+                height: 49px;
+            }
+        }
+    &__menu {
+        @include flex;
+        flex-grow: 1;
+        height: $heightNav;
+        background-color: rgba(255,255,255,0.7);
+        ul {
+            li {
+                display: inline;
+                position: relative;
+                &:after {
+                    width: 8px;
+                    height: 8px;
+                    display: block;
+                    background-color: #3EC6FF;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: -7px;
+                    top: 4px;
+                    z-index: 100;
+                    content:" ";
+                }
+                &:last-child {
+                    &::after {
+                        display: none;
+                    }
+                }
+                a {
+                    font-size: 18px;
+                    color: #565656;
+                    text-transform: capitalize;
+                    font-family: 'Sarabun', sans-serif;
+                    font-weight: 400;
+                    text-shadow: 0 0 10px #ffffff;
+                    transition: all 0.2s;
+                    padding: 5px 15px;
+                    &:hover {
+                        color: $colorDarkGray;
+                    }
+                }
+            }
+        }
+    }
+}

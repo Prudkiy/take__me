@@ -17,7 +17,7 @@ var config = {
         js: './public/js/src/*.js'
     },
     output: {
-        cssName: 'bundle.min.css',
+        cssName: 'main.min.css',
         jsName: 'main.min.js',
         path: './public',
         pathCss: './public/css',

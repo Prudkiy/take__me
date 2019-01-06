@@ -1,0 +1,18 @@
+@import "partials/media";
+@import "partials/mixins";
+@import "partials/params";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Sarabun:400,700');
+
+body {
+    background-color: $colorBg;
+    height: 1000px; //////////////////////////// !!!!!!!!!
+}
+
+a {
+    text-decoration: none;
+}
+
+.view-port {
+    max-width: $view-port;
+}
