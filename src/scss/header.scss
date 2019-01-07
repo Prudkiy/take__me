@@ -35,13 +35,13 @@ body .header__bg__animation {
         z-index: 101;
         background-color: none;
         display: flex;
-        align-items: center;
         justify-content: center;
     }
     &__wrap {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 37vh;
         h1 {
             font-size: 48px;
             color: $colorWhite;
@@ -65,25 +65,45 @@ body .header__bg__animation {
         align-items: center;
         background-color: $colorWhite;
         margin: 0 14px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #777777;
         input {
             background-color: $colorWhite;
             font-size: 16px;
-            color: #BCBCBC;
+            color: $colorNav;
             border: none;
             width: 271px - $padding_left_right;
+            font-family: 'Roboto', sans-serif;
+            transition: all 0.3s;
+            &::-moz-placeholder { color: #BCBCBC; }
+            &::-webkit-input-placeholder { color: #BCBCBC; }
             &[type=submit] {
                 border: none;
-                width: 171px - $padding_left_right;
-                background-color: $colorBlue;
+                width: 170px;
+                height: 48px;
+                background-color: $colorBlueRgba2;
                 color: $colorWhite;
+                border-radius: 5px;
+                &:hover {
+                    background-color: $colorBlueRgba1;
+                }
             }
+            
             
         }
         &--first {
             width: 371px - $padding_left_right;
         }
         &--submit {
-            background-color: $colorBlue;
+            background-color: $colorBlueRgba2;
+            padding: 0 1px;
+            border-radius: 5px;
+        }
+        &--select {
+            cursor: pointer;
+            input {
+                cursor: pointer;
+            }
         }
     }
 }

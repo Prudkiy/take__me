@@ -3,9 +3,14 @@ jQuery(document).ready(function()
 	$.simpleSlideshow({
 		container : '.custom-slider', // Селектор контейнера с элементами
 		item : 'div', // Селектор элемента
-		delay : 4000, // Задержка между сменой элементов в миллисекундах
+		delay : 6000, // Задержка между сменой элементов в миллисекундах
 		speed : 1000, // Скорость анимации элементов в миллисекундах
 	});
+
+	$('.header__input--select').click(function(){
+		alert('go')
+	});
+
 });
 
 
