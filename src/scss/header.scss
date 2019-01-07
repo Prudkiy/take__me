@@ -2,8 +2,90 @@
 @import "partials/mixins";
 @import "partials/params";
 
+@keyframes bgHeader {
+    from {background-color: rgba(225, 225, 225, 0);}
+    to {background-color: rgba(225, 225, 225, 1);}
+}
+
+body .header__bg__animation {
+    animation-name: bgHeader;
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+}
+
 .header {
     width: 100%;
     height: 100vh;
-    background-image: url('../img/head__slide-1.jpg');
+    position: fixed;
+    z-index: 100;
+    .custom-slider {
+        position: relative;
+    }
+    .custom-slider > div {
+        position: absolute;
+    }
+    .custom-slider, .custom-slider > div > img {
+        width:100%;
+    }
+    &__content {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        z-index: 101;
+        background-color: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+            font-size: 48px;
+            color: $colorWhite;
+            margin-bottom: 50px;
+        }
+        h2 {
+            color: $colorWhite;
+            font-size: 18px;
+            margin-bottom: 80px;
+        }
+    }
+    &__formHeader {
+        display: flex;
+        flex-direction: row;
+    }
+    $padding_left_right: 28px;
+    &__input {
+        padding: 0 $padding_left_right;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        background-color: $colorWhite;
+        margin: 0 14px;
+        input {
+            background-color: $colorWhite;
+            font-size: 16px;
+            color: #BCBCBC;
+            border: none;
+            width: 271px - $padding_left_right;
+            &[type=submit] {
+                border: none;
+                width: 171px - $padding_left_right;
+                background-color: $colorBlue;
+                color: $colorWhite;
+            }
+            
+        }
+        &--first {
+            width: 371px - $padding_left_right;
+        }
+        &--submit {
+            background-color: $colorBlue;
+        }
+    }
 }
+
+

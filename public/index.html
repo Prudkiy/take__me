@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="css/main.min.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
-    <script src="../src/js/nav.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/header.js"></script>
 
 </head>
 <body>
         <!-- первый блок - навигация-->
         <nav class="nav">
-            <div class="nav__left"></div>
             <div class="nav__wrap view-port">
 
                     <div class="nav__logo">
@@ -34,13 +34,33 @@
                     </div>
 
             </div>
-            <div class="nav__right"></div>
         </nav>
 
         <!-- второй блок - слайдер -->
         <header class="header">
-
+            <div class="custom-slider">
+                <div><img src="img/head-slide-2.jpg" alt=""/></div>
+                <div><img src="img/head-slide-1.jpg" alt=""/></div>
+            </div>
+            <div class="header__content">
+                <div class="header__wrap">
+                    <h1>Find Your Dream Vacation Location</h1>
+                    <h2>Search hundreds of locations from around the world and find your perfect vacation location.</h2>
+                    <form class="header__formHeader" action="" method="post">
+                            <div class="header__input header__input--first"><input type="text" name="" placeholder="Country or ZIP code"></div>
+                            <div class="header__input"><input type="text" name="" placeholder="Transportation"></div>
+                            <div class="header__input"><input type="text" name="" placeholder="Number of people"></div>
+                            <div class="header__input header__input--submit"><input type="submit" value="Submit" name=""></div>
+                    </form>
+                </div>
+            </div>
         </header>
+
+        <!-- тритий блок, блок всего контакта -->
+        <div class="mainWrap">
+
+        </div>
+
 
 </body>
 </html>

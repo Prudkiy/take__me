@@ -2,43 +2,86 @@
 @import "partials/mixins";
 @import "partials/params";
 
+$heightNav: 115px;
+$heightNavMin: 50px;
+$timeAnimiationNav: 400ms;
+$logoWidht: 146px;
+$logoHeight: 49px;
+$sizeMinLogo: 0.7;
+
+@keyframes minHeightDown {
+    from {height: $heightNav;}
+    to {height: $heightNavMin;}
+}
+@keyframes minHeightUp {
+    from {height: $heightNavMin;}
+    to {height: $heightNav;}
+}
+@keyframes minImgDown {
+    from {width: $logoWidht; height: $logoHeight;}
+    to {width: $logoWidht * $sizeMinLogo; height: $logoHeight * $sizeMinLogo;}
+}
+@keyframes minImgUp {
+    from {width: $logoWidht * $sizeMinLogo; height: $logoHeight * $sizeMinLogo;}
+    to {width: $logoWidht; height: $logoHeight;}
+}
+
+body .animationNavDown {
+    animation-name: minHeightDown;
+    animation-duration: $timeAnimiationNav;
+    animation-timing-function: linear;
+    height: $heightNavMin;
+    .nav__logo img {
+        animation-name: minImgDown;
+        animation-duration: $timeAnimiationNav;
+        animation-timing-function: linear;
+        width: $logoWidht * 0.7;
+        height: $logoHeight * 0.7;
+    }
+}
+
+body .animationNavUp {
+    animation-name: minHeightUp;
+    animation-duration: $timeAnimiationNav;
+    animation-timing-function: linear;
+    height: $heightNav;
+    .nav__logo img {
+        animation-name: minImgUp;
+        animation-duration: $timeAnimiationNav;
+        animation-timing-function: linear;
+        width: $logoWidht;
+        height: $logoHeight;
+    }
+}
+
 .nav {
     width: 100%;
     position: fixed;
+    z-index: 300;
     display: flex;
     justify-content: space-between;
     box-shadow: 0 2px 7px #444444;
-    &__left {
-        height: $heightNav;
-        flex-grow: 1;
-        background-color: #fff;
-    }
-    &__right {
-        height: $heightNav;
-        flex-grow: 1;
-        background-color: rgba(255,255,255,0.7);
-    }
+    height: $heightNav;
+    background-color: $colorWhite;
     &__wrap {
         @include flexSB;
         margin: 0 auto;
-        
     }
     &__logo {
-        height: $heightNav;
         width: 300px;
         display: flex;
         align-items: center;
-        background: linear-gradient(to right, rgba(255,255,255,1) 70%,rgba(255,255,255,0.7) 100%,rgba(255,255,255,0.7) 100%);
-            img {
-                width: 146px;
-                height: 49px;
+        background-color: rgba(255,255,255,1);
+        img {
+                width: $logoWidht;
+                height: $logoHeight;
             }
         }
     &__menu {
         @include flex;
         flex-grow: 1;
-        height: $heightNav;
-        background-color: rgba(255,255,255,0.7);
+        background-color: rgba(255,255,255,1);
+        transition: all 0.3s;
         ul {
             li {
                 display: inline;
@@ -47,7 +90,7 @@
                     width: 8px;
                     height: 8px;
                     display: block;
-                    background-color: #3EC6FF;
+                    background-color: $colorBlue;
                     border-radius: 50%;
                     position: absolute;
                     right: -7px;
@@ -62,7 +105,7 @@
                 }
                 a {
                     font-size: 18px;
-                    color: #565656;
+                    color: $colorNav;
                     text-transform: capitalize;
                     font-family: 'Sarabun', sans-serif;
                     font-weight: 400;

@@ -2,6 +2,8 @@ $( document ).ready(function() {
 
     const nav = $('.nav');
 
+    
+
     window.onscroll = () => {
         let scrolled = window.pageYOffset || document.documentElement.scrollTop;
         if (scrolled === 0) {

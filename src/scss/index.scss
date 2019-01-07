@@ -6,7 +6,6 @@
 
 body {
     background-color: $colorBg;
-    height: 1000px; //////////////////////////// !!!!!!!!!
 }
 
 a {
@@ -15,4 +14,17 @@ a {
 
 .view-port {
     max-width: $view-port;
+}
+
+h1, h2 {
+    font-family: 'Sarabun', sans-serif;
+}
+
+.mainWrap {
+    position: absolute;
+    z-index: 200;
+    margin-top: 100vh;
+    background-color: $colorBg;
+    height: 1000px; // !!!!!!!!!!!!!!!!!!!!
+    width: 100%;
 }
