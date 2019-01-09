@@ -2,31 +2,47 @@
 @import "partials/mixins";
 @import "partials/params";
 
-@keyframes bgHeader {
-    from {background-color: rgba(225, 225, 225, 0);}
-    to {background-color: rgba(225, 225, 225, 1);}
+/* 
+Первичные стили:
+С ними работает слайд шоу
+*/
+
+#slides {
+    position: relative;
+    height: 300px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+   }
+   
+.slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+   
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+   
+.showing {
+    opacity: 1;
+    z-index: 2;
 }
 
-body .header__bg__animation {
-    animation-name: bgHeader;
-    animation-duration: 1000ms;
-    animation-timing-function: linear;
-}
+
+//////
 
 .header {
     width: 100%;
     height: 100vh;
     position: fixed;
     z-index: 100;
-    .custom-slider {
-        position: relative;
-    }
-    .custom-slider > div {
-        position: absolute;
-    }
-    .custom-slider, .custom-slider > div > img {
-        width:100%;
-    }
     &__content {
         width: 100%;
         height: 100vh;
@@ -60,7 +76,7 @@ body .header__bg__animation {
     $padding_left_right: 28px;
     &__input {
         padding: 0 $padding_left_right;
-        height: 50px;
+        height: $heightInputHeader;
         display: flex;
         align-items: center;
         background-color: $colorWhite;
@@ -75,8 +91,8 @@ body .header__bg__animation {
             width: 271px - $padding_left_right;
             font-family: 'Roboto', sans-serif;
             transition: all 0.3s;
-            &::-moz-placeholder { color: #BCBCBC; }
-            &::-webkit-input-placeholder { color: #BCBCBC; }
+            &::-moz-placeholder { color: $colorPlacenholder; }
+            &::-webkit-input-placeholder { color: $colorPlacenholder; }
             &[type=submit] {
                 border: none;
                 width: 170px;
@@ -101,9 +117,37 @@ body .header__bg__animation {
         }
         &--select {
             cursor: pointer;
+            position: relative;
             input {
                 cursor: pointer;
+                text-align: left;
+                color: $colorPlacenholder;
+
             }
+        }
+    }
+    &__selectBlock {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        left: 0;
+        top: 0;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        background-color: rgba(225, 225, 225, 0.5);
+        color: $colorDarkGray;
+        font-size: 16px;
+        span {
+            padding: 10px;
+            border-bottom: 1px solid $colorNav;
+            &:last-child {
+                border: none;
+            }
+        }
+        &--bottom {
+            top: $heightInputHeader;
         }
     }
 }

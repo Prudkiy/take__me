@@ -1,46 +1,19 @@
-jQuery(document).ready(function()
-{
-	$.simpleSlideshow({
-		container : '.custom-slider', // Селектор контейнера с элементами
-		item : 'div', // Селектор элемента
-		delay : 6000, // Задержка между сменой элементов в миллисекундах
-		speed : 1000, // Скорость анимации элементов в миллисекундах
-	});
+$( document ).ready(function() {
 
-	$('.header__input--select').click(function(){
-		alert('go')
-	});
+function slideBg (blockMainId, blockSlideClass, time) {
+	let slides = document.querySelectorAll('#'+ blockMainId +' .'+ blockSlideClass +'');
+	let currentSlide = 0;
+	let slideInterval = setInterval(nextSlide, time);
+	
+	function nextSlide() {
+	 slides[currentSlide].className = 'slide';
+	 currentSlide = (currentSlide+1)%slides.length;
+	 slides[currentSlide].className = 'slide showing';
+	}
+}
+
+
+slideBg ('slides', 'slide', 2000);
+
 
 });
-
-
-;(function($)
-{
-	$.simpleSlideshow = function(options)
-	{
-		var plugin = this;
-
-		plugin.settings = $.extend({ container : 'ul.slideshow', item : 'li', delay : 1000, speed : 500 }, options || {});
-		
-		plugin.setSlideshow = function()
-		{
-			$(plugin.settings.container).each(function(i, box)
-			{
-				$(' > ' + plugin.settings.item + ':gt(0)', $(box)).hide();
-				
-				setInterval(function()
-				{
-					$(' > ' + plugin.settings.item + ':first', $(box))
-					.fadeOut(plugin.settings.speed)
-					.next()
-					.fadeIn(plugin.settings.speed)
-					.end()
-					.appendTo($(box));
-				},
-				plugin.settings.delay);
-			});
-		};
-		
-		plugin.setSlideshow();
-	}
-})(jQuery);
