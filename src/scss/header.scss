@@ -142,8 +142,12 @@
         span {
             padding: 10px;
             border-bottom: 1px solid $colorNav;
+            transition: all 0.1s;
             &:last-child {
                 border: none;
+            }
+            &:hover {
+                background-color: rgba(225, 225, 225, 0.7);
             }
         }
         &--bottom {

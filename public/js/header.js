@@ -13,7 +13,11 @@ function slideBg (blockMainId, blockSlideClass, time) {
 }
 
 
-slideBg ('slides', 'slide', 2000);
+
+
+slideBg ('slides', 'slide', 6000);
+
+
 
 
 });
