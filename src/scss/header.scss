@@ -58,20 +58,34 @@
         flex-direction: column;
         align-items: center;
         margin-top: 37vh;
+        @include table {
+            flex-direction: row;
+            align-items: flex-start;
+            margin-top: 30vh;
+        }
         h1 {
             font-size: 48px;
             color: $colorWhite;
             margin-bottom: 50px;
+            @include table {
+                font-size: 38px;
+            }
         }
         h2 {
             color: $colorWhite;
             font-size: 18px;
             margin-bottom: 80px;
+            @include table {
+                widht: 50%;
+            }
         }
     }
     &__formHeader {
         display: flex;
         flex-direction: row;
+         @include table {
+             flex-direction: column;
+         }
     }
     $padding_left_right: 28px;
     &__input {
@@ -83,6 +97,9 @@
         margin: 0 14px;
         border-radius: 5px;
         box-shadow: 0 0 5px #777777;
+        @include table {
+            margin: 10px 14px;
+        }
         input {
             background-color: $colorWhite;
             font-size: 16px;

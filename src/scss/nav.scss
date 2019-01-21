@@ -63,6 +63,9 @@ body .animationNavUp {
     box-shadow: 0 2px 7px #444444;
     height: $heightNav;
     background-color: $colorWhite;
+    @include table{
+        height: $heightNavMin;
+    }
     &__wrap {
         @include flexSB;
         margin: 0 auto;
