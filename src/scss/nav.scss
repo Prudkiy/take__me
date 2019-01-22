@@ -65,10 +65,14 @@ body .animationNavUp {
     background-color: $colorWhite;
     @include table{
         height: $heightNavMin;
+        
     }
     &__wrap {
         @include flexSB;
         margin: 0 auto;
+        @include tableMin {
+            margin: 0 10px;
+        }
     }
     &__logo {
         width: 300px;
@@ -96,12 +100,13 @@ body .animationNavUp {
                 width: 100vw;
                 height: 100vh;
                 background-color: $colorBg;
+                display: none;
             }
             li {
                 display: inline;
                 @include tableMin {
                     display: block;
-                    margin: 10px 0;
+                    margin: 15px 0;
                     padding-left: 10px;
                 }
                 position: relative;
@@ -145,12 +150,23 @@ body .animationNavUp {
         }
     }
     &__butNav {
-        width: 50px;
-        height: 50px;
-        background-color: black;
+        width: 40px;
+        height: 30px;
         z-index: 1000;
         position: absolute;
         top: 10px;
-        right: 10px;
+        right: 15px;
+        cursor: pointer;
+        transition: all 0.2s;
+        &:hover {
+            opacity: 0.8;
+        }
+        &--bgOpen {
+            background-image: url('../img/menu.png');
+            display: none;
+            @include tableMin {
+                display: block;
+            }
+        }
     }
 }

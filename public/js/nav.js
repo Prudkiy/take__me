@@ -2,6 +2,7 @@ $( document ).ready(function() {
 
     const nav = $('.nav');
 	const tableWidth = 1268 // также данная ширина указана в стилях, media.scss строка 3
+	let navigationState = false;
     
 
     window.onscroll = () => {
@@ -67,6 +68,18 @@ $( document ).ready(function() {
 
 	}
 
+	function navigation () {
+		let nav = $('.nav__menu ul');
+		if(navigationState) {
+			nav.css('display', 'none');
+			navigationState = false;
+		}
+		else {
+			nav.css('display', 'block');
+			navigationState = true;
+		}
+	}
+
 	positionSelectHeaderBlock();
 	hideShow();
 	$('#header__input--select').click(hideShow.bind(this));
@@ -74,6 +87,7 @@ $( document ).ready(function() {
 		nav.removeClass("animationNavUp");
         nav.addClass("animationNavDown");
 	}
+	$('.nav__butNav').click(navigation);
 
      
 });
