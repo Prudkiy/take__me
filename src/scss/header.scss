@@ -80,13 +80,14 @@
             }
         }
         &--text {
-            display: none;
+            @include mobile {
+                display: none;
+            }
         }
     }
     &__formHeader {
         display: flex;
         flex-direction: row;
-        outline: 1px solid blue;
          @include table {
              flex-direction: column;
          }

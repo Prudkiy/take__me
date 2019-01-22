@@ -75,6 +75,9 @@ body .animationNavUp {
         display: flex;
         align-items: center;
         background-color: rgba(255,255,255,1);
+        @include table {
+            width: 150px;
+        }
         img {
                 width: $logoWidht;
                 height: $logoHeight;
@@ -86,8 +89,21 @@ body .animationNavUp {
         background-color: rgba(255,255,255,1);
         transition: all 0.3s;
         ul {
+            @include tableMin {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background-color: $colorBg;
+            }
             li {
                 display: inline;
+                @include tableMin {
+                    display: block;
+                    margin: 10px 0;
+                    padding-left: 10px;
+                }
                 position: relative;
                 &:after {
                     width: 8px;
@@ -100,10 +116,16 @@ body .animationNavUp {
                     top: 4px;
                     z-index: 100;
                     content:" ";
+                    @include tableMin {
+                        left: 10px;
+                    }
                 }
                 &:last-child {
                     &::after {
                         display: none;
+                        @include tableMin {
+                            display: block;
+                        }
                     }
                 }
                 a {

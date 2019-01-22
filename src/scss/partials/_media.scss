@@ -5,8 +5,14 @@
     }
 }
 
+@mixin tableMin() {
+    @media only screen and (max-width: 950px){
+        @content;
+    }
+}
+
 @mixin mobile() {
-    @media only screen and (max-width: 576px){
+    @media only screen and (max-width: 720px){
         @content;
     }
 }
