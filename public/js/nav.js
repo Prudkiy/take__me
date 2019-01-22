@@ -1,14 +1,14 @@
 $( document ).ready(function() {
 
     const nav = $('.nav');
-
+	const tableWidth = 1268 // также данная ширина указана в стилях, media.scss строка 3
     
 
     window.onscroll = () => {
         let scrolled = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrolled === 0) {
+        if (scrolled === 0 && (window.innerWidth > tableWidth)) {
             nav.removeClass("animationNavDown");
-            nav.addClass("animationNavUp");
+			nav.addClass("animationNavUp");
         }
         else {
             nav.removeClass("animationNavUp");
@@ -70,5 +70,10 @@ $( document ).ready(function() {
 	positionSelectHeaderBlock();
 	hideShow();
 	$('#header__input--select').click(hideShow.bind(this));
+	if(window.innerWidth < tableWidth) {
+		nav.removeClass("animationNavUp");
+        nav.addClass("animationNavDown");
+	}
+
      
 });

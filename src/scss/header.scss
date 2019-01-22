@@ -108,6 +108,9 @@
             width: 271px - $padding_left_right;
             font-family: 'Roboto', sans-serif;
             transition: all 0.3s;
+            @include table {
+                width: 100%;
+            }
             &::-moz-placeholder { color: $colorPlacenholder; }
             &::-webkit-input-placeholder { color: $colorPlacenholder; }
             &[type=submit] {
@@ -117,6 +120,9 @@
                 background-color: $colorBlueRgba2;
                 color: $colorWhite;
                 border-radius: 5px;
+                @include table {
+                    width: 100%;
+                }
                 &:hover {
                     background-color: $colorBlueRgba1;
                 }
