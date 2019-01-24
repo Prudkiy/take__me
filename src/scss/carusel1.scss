@@ -1,0 +1,74 @@
+@import "partials/media";
+@import "partials/mixins";
+@import "partials/params";
+
+.blockCarusel1 {
+    width: 100%;
+    overflow: hidden;
+    &__wrap {
+        width: $view-port;
+        display: flex;
+        margin: 0 auto;
+        height: 594px;
+    }
+    &__text {
+        width: 600px;
+        display: flex;
+        align-items: center;
+        &--wrap {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Sarabun', sans-serif;
+            h2 {
+                color: #868686;
+                font-size: 48px;
+                font-weight: 700;
+                width: 400px;
+                line-height: 55px;
+            }
+            h3 {
+                color: #878787;
+                font-size: 16px;
+                padding-top: 45px;
+                line-height: 20px;
+            }
+            button {
+                width: 275px;
+                background-color: $colorBlue;
+                border-radius: 5px;
+                border: none;
+                height: 50px;
+                font-size: 16px;
+                color: #ffffff;
+                margin-top: 50px;
+                transition: all 0.2s;
+                &:hover {
+                    background-color: $colorBlueRgba1;
+                }
+            }
+        }
+    }
+    &__slide {
+        flex-grow: 1;
+        position: relative;
+    }
+    &__img {
+        margin-top: 50px;
+        position: relative;
+        height: 420px;
+        &--wrap {
+            width: 200%;
+            height: 420px;
+            background-color: yellow;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    &__but {
+        width: 100%;
+        height: 121px;
+        display: flex;
+        align-items: center;
+    }
+}
