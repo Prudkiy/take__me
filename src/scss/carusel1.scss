@@ -2,8 +2,6 @@
 @import "partials/mixins";
 @import "partials/params";
 
-
-
 .blockCarusel1 {
     width: 100%;
     overflow: hidden;
@@ -51,56 +49,21 @@
         }
     }
     &__slide {
-        flex-grow: 1;
-        position: relative;
-    }
-    &__img {
-        margin-top: 50px;
-        position: relative;
-        height: 420px;
-        &--wrap {
-            width: 400%;
-            height: 420px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            overflow: hidden;
-        }
-        img {
-            width: 270px;
-            height: 416px;
-            
-            border-radius: 5px;
-        }
-        .item {
-            width: 270px;
-            position: relative;
-        }
-    }
-    &__carousel {
-        display: flex;
-    }
-    &__but {
         width: 100%;
-        height: 121px;
-        display: flex;
-        align-items: center;
-        span {
-            display: block;
-            width: 14px;
-            height: 14px;
-            background-color: #C1C1C1;
-            border-radius: 50%;
-            margin-right: 10px;
-            box-sizing: border-box;
-            cursor: pointer;
-            transition: all 0.2s;
-            &:hover {
-                border: 2px solid $colorNav;
+        margin-left: 200px;
+        .owl-carousel {
+            margin-top: 110px;
+            .item {
+                width: 270px;
+                height: 416px;
+                border-radius: 10px;
+                box-sizing: border-box;
+                img {
+                    border-radius: 10px;
+                    width: 100%;
+                    height: 100%;
+                }
             }
-        }
-        &--act {
-            border: 2px solid $colorBlue;
         }
     }
 }

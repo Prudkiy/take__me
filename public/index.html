@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.min.css">
 
+    <link rel="stylesheet" href="lib/owl__carusel/owl.carousel.css">
+    <link rel="stylesheet" href="lib/owl__carusel/owl.theme.default.css">
+
 </head>
 <body>
         <!-- первый блок - навигация-->
@@ -79,35 +82,107 @@
                         </div>
                     </div>
                     <div class="blockCarusel1__slide">
-                            <div class="blockCarusel1__img">
-                                    <div class="blockCarusel1__img--wrap">
                                         
-                                            <div class="blockCarusel1__carousel"> <!--- этот класс передать при вызове обьекта js-->
-                                                <div class="item"><img src="img/slide_1/slide_5.jpg" alt=""></div>
+                                            <div class="owl-carousel owl-theme"> <!--- этот класс передать при вызове обьекта js-->
                                                     <div class="item"><img src="img/slide_1/slide_1.jpg" alt=""></div>
                                                     <div class="item"><img src="img/slide_1/slide_2.jpg" alt=""></div>
                                                     <div class="item"><img src="img/slide_1/slide_3.jpg" alt=""></div>
                                                     <div class="item"><img src="img/slide_1/slide_4.jpg" alt=""></div>
                                                     <div class="item"><img src="img/slide_1/slide_5.jpg" alt=""></div>
-                                                <div class="item"><img src="img/slide_1/slide_1.jpg" alt=""></div>
                                             </div>
 
-                                    </div>
-                            </div>
-                            <div class="blockCarusel1__but">
-                                <!-- <span class="blockCarusel1__but--act"></span> -->
-                            </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="lineBlock view-port"></div> <!--Разделитель -->
+
+            <!--  блок, лучшее предложения-->
+            <div class="bestTravel view-port">
+
+                <div class="bestTravel__block">
+                    <div class="bestTravel__img"><img src="img/bes-travel-1.jpg" alt=""></div>
+                    <div class="bestTravel__title">Magical Paris</div>
+                    <div class="bestTravel__discription">
+                            City of light, one of the most famous cities in the world is waiting to be explored. Some of the most
+                            famous museums, food and landmarks are waiting
+                            for you in Paris.
+                    </div>
+                    <div class="bestTravel__footer">
+                        <div class="bestTravel__stars">
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star05"></span>
+                        </div>
+                        <div class="bestTravel__ratings">12568 Ratings</div>
+                    </div>
+                </div>
+                
+                <div class="bestTravel__block">
+                        <div class="bestTravel__img"><img src="img/bes-travel-2.jpg" alt=""></div>
+                        <div class="bestTravel__title">Classic London</div>
+                        <div class="bestTravel__discription">
+                                City of light, one of the most famous cities in the world is waiting to be explored. Some of the most
+                                famous museums, food and landmarks are waiting
+                                for you in Paris.
+                        </div>
+                        <div class="bestTravel__footer">
+                            <div class="bestTravel__stars">
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star05"></span>
+                            </div>
+                            <div class="bestTravel__ratings">5688 Ratings</div>
+                        </div>
+                </div>
+
+                <div class="bestTravel__block">
+                            <div class="bestTravel__img"><img src="img/bes-travel-3.jpg" alt=""></div>
+                            <div class="bestTravel__title">Famous New York</div>
+                            <div class="bestTravel__discription">
+                                    City of light, one of the most famous cities in the world is waiting to be explored. Some of the most
+                                    famous museums, food and landmarks are waiting
+                                    for you in Paris.
+                            </div>
+                            <div class="bestTravel__footer">
+                                <div class="bestTravel__stars">
+                                        <span class="star"></span>
+                                        <span class="star"></span>
+                                        <span class="star"></span>
+                                        <span class="star"></span>
+                                        <span class="star05"></span>
+                                </div>
+                                <div class="bestTravel__ratings">8532 Ratings</div>
+                            </div>
+                </div>
+
+            </div>
+
+            <div class="lineBlock view-port"></div> <!-- Разделитель-->
+
+            <div class="selectTravel view-port"> <!-- блок выбора поездки, фильтр -->
+                <div class="selectTravel__filter">
+
+                </div>
+                <div class="selectTravel__wrapTravel">
+
                 </div>
             </div>
 
         </div>
 
+        
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
         <script src="js/nav.js"></script>
         <script src="js/header.js"></script>
-        <script src="js/slide1.js"></script>
 
+        <script src="lib/owl__carusel/owl.carousel.min.js"></script>
+        <script src="js/slide1.js"></script>
 
 </body>
 </html>
