@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="lib/owl__carusel/owl.carousel.css">
     <link rel="stylesheet" href="lib/owl__carusel/owl.theme.default.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 </head>
 <body>
@@ -163,13 +164,364 @@
             </div>
 
             <div class="lineBlock view-port"></div> <!-- Разделитель-->
+                <div class="selectTravelWrap">
+                <div class="selectTravel view-port"> <!-- блок выбора поездки, фильтр -->
+                    <div class="selectTravel__filter"> <!-- filter-->
 
-            <div class="selectTravel view-port"> <!-- блок выбора поездки, фильтр -->
-                <div class="selectTravel__filter">
+                        <div class="selectTravel__filter__blockSelect">
+                            <p>Language Spoken<span></span></p>
+                            <div class="selectTravel__filter__blockSelect__punkt hide">
+                                <ul>
+                                    <li>lorem ipsum</li>
+                                    <li>lorem ipsum</li>
+                                    <li>lorem ipsum</li>
+                                    <li>lorem ipsum</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="selectTravel__filter__blockSelect">
+                                <p>Meal Type<span></span></p>
+                                <div class="selectTravel__filter__blockSelect__punkt hide">
+                                    <ul>
+                                        <li>lorem ipsum</li>
+                                        <li>lorem ipsum</li>
+                                        <li>lorem ipsum</li>
+                                        <li>lorem ipsum</li>
+                                    </ul>
+                                </div>
+                        </div>
+                        <div class="selectTravel__filter__blockSelect">
+                                <p>Excursions<span></span></p>
+                                <div class="selectTravel__filter__blockSelect__punkt hide">
+                                    <ul>
+                                        <li>lorem ipsum</li>
+                                        <li>lorem ipsum</li>
+                                        <li>lorem ipsum</li>
+                                        <li>lorem ipsum</li>
+                                    </ul>
+                                </div>
+                        </div>
+                        <div class="selectTravel__filter__blockSelect">
+                                <p>Hotel Type<span></span></p>
+                                <div class="selectTravel__filter__blockSelect__punkt hide">
+                                    <ul>
+                                        <li>lorem ipsum</li>
+                                        <li>lorem ipsum</li>
+                                        <li>lorem ipsum</li>
+                                        <li>lorem ipsum</li>
+                                    </ul>
+                                </div>
+                        </div>
+                        <div class="selectTravel__filter__blockSelect">
+                                <p>Room Type<span></span></p>
+                                <div class="selectTravel__filter__blockSelect__punkt hide">
+                                    <ul>
+                                        <li>lorem ipsum</li>
+                                        <li>lorem ipsum</li>
+                                        <li>lorem ipsum</li>
+                                        <li>lorem ipsum</li>
+                                    </ul>
+                                </div>
+                        </div>
+                        <div class="selectTravel__filter__blockSelect">
+                                <p>Parking<span></span></p>
+                                <div class="selectTravel__filter__blockSelect__punkt hide">
+                                    <ul>
+                                        <li>lorem ipsum</li>
+                                        <li>lorem ipsum</li>
+                                        <li>lorem ipsum</li>
+                                        <li>lorem ipsum</li>
+                                    </ul>
+                                </div>
+                        </div>
 
-                </div>
-                <div class="selectTravel__wrapTravel">
+                        <div class="selectTravel__filter__blockCheck">
+                                <h4 class="polzunok-container-5-title">Price Range</h4>
+                                
+                                <div class="polzunok-container-5">
+                                    
+                                    <div class="polzunok-5"></div>
+                                    <div class="polzunok-container-5-wrap">
+                                            <input type="text" class="polzunok-input-5-left" />
+                                            <input type="text" class="polzunok-input-5-right "/>
+                                        </div>
+                                </div>
+    
+                            </div>
 
+                        <div class="selectTravel__filter__blockCheck">
+
+                            <div class="selectTravel__filter__blockCheck--wrap"> <!--чекбокс-->
+                                    <div class="checkbox" id="checkBox__1"> <input type="checkbox"></div>
+                                    <p>Round Trip</p>
+                            </div>
+                            
+                            <div class="selectTravel__filter__blockCheck--wrap">
+                                    <div class="checkbox" id="checkBox__2"><input type="checkbox"></div>
+                                    <p>One Way</p>
+                            </div>
+
+                        </div>
+
+                        <div class="selectTravel__filter__blockCheck">
+
+                            <div class="radioBox radioBoxWrap" id="radioBox__1"> <!--радиокнопки-->
+                                <div class="radio--wrap"><div class="radio"><input type="radio" name="radioBox__1" value="1"></div><p>First Class</p></div>
+                                <div class="radio--wrap"><div class="radio"><input type="radio" name="radioBox__1" value="1" checked></div><p>Business</p></div>
+                                <div class="radio--wrap"><div class="radio"><input type="radio" name="radioBox__1" value="1"></div><p>Coach</p></div>
+                            </div>
+
+                        </div>
+
+                        <div class="selectTravel__filter__blockCheck"> <!--радиокнопки-->
+
+                            <div class="radioBox radioBoxWrap" id="radioBox__2">
+                                <div class="radio--wrap"><div class="radio"><input type="radio" name="radioBox__2" value="1" checked></div><p>Without Carry On</p></div>
+                                <div class="radio--wrap"><div class="radio"><input type="radio" name="radioBox__2" value="1"></div><p>With Carry On</p></div>
+                            </div>
+
+                        </div>
+
+                        
+
+                    </div>
+                    <div class="selectTravel__wrapTravel">
+
+                        <div class="selectTravel__wrapTravel__karta"> <!-- карточка -->
+                            <div class="selectTravel__wrapTravel__karta__title">
+                                <h2>New York Skyline Tour</h2><div><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star05"></span></div>
+                                <h3>The best of New York</h3><p>146 Reviews</p>
+                            </div>
+                            <div class="selectTravel__wrapTravel__karta__img">
+                                <img src="img/location1.jpg" alt="">
+                            </div>
+                            <div class="selectTravel__wrapTravel__karta__text">
+                                <p>
+                                    Take a look at New York from above, the best way
+                                    to see this city. You will find all the classic buildings,
+                                    sights and more plus.
+                                </p>
+                            </div>
+                            <div class="selectTravel__wrapTravel__karta__but">
+                                <div>
+                                    <div class="selectTravel__wrapTravel__karta__but--face"></div>
+                                    <div class="selectTravel__wrapTravel__karta__but--faceText">126 spaces left</div>
+                                </div>
+                                <div>
+                                    <div><button>Book Now</button></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="selectTravel__wrapTravel__karta"> <!-- карточка -->
+                            <div class="selectTravel__wrapTravel__karta__title">
+                                <h2>New York Skyline Tour</h2><div><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star05"></span></div>
+                                <h3>The best of New York</h3><p>146 Reviews</p>
+                            </div>
+                            <div class="selectTravel__wrapTravel__karta__img">
+                                <img src="img/location2.jpg" alt="">
+                            </div>
+                            <div class="selectTravel__wrapTravel__karta__text">
+                                <p>
+                                    Take a look at New York from above, the best way
+                                    to see this city. You will find all the classic buildings,
+                                    sights and more plus.
+                                </p>
+                            </div>
+                            <div class="selectTravel__wrapTravel__karta__but">
+                                <div>
+                                    <div class="selectTravel__wrapTravel__karta__but--face"></div>
+                                    <div class="selectTravel__wrapTravel__karta__but--faceText">126 spaces left</div>
+                                </div>
+                                <div>
+                                    <div><button>Book Now</button></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="selectTravel__wrapTravel__karta"> <!-- карточка -->
+                            <div class="selectTravel__wrapTravel__karta__title">
+                                <h2>New York Skyline Tour</h2><div><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star05"></span></div>
+                                <h3>The best of New York</h3><p>146 Reviews</p>
+                            </div>
+                            <div class="selectTravel__wrapTravel__karta__img">
+                                <img src="img/location3.jpg" alt="">
+                            </div>
+                            <div class="selectTravel__wrapTravel__karta__text">
+                                <p>
+                                    Take a look at New York from above, the best way
+                                    to see this city. You will find all the classic buildings,
+                                    sights and more plus.
+                                </p>
+                            </div>
+                            <div class="selectTravel__wrapTravel__karta__but">
+                                <div>
+                                    <div class="selectTravel__wrapTravel__karta__but--face"></div>
+                                    <div class="selectTravel__wrapTravel__karta__but--faceText">126 spaces left</div>
+                                </div>
+                                <div>
+                                    <div><button>Book Now</button></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="selectTravel__wrapTravel__karta"> <!-- карточка -->
+                            <div class="selectTravel__wrapTravel__karta__title">
+                                <h2>New York Skyline Tour</h2><div><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star05"></span></div>
+                                <h3>The best of New York</h3><p>146 Reviews</p>
+                            </div>
+                            <div class="selectTravel__wrapTravel__karta__img">
+                                <img src="img/location3.jpg" alt="">
+                            </div>
+                            <div class="selectTravel__wrapTravel__karta__text">
+                                <p>
+                                    Take a look at New York from above, the best way
+                                    to see this city. You will find all the classic buildings,
+                                    sights and more plus.
+                                </p>
+                            </div>
+                            <div class="selectTravel__wrapTravel__karta__but">
+                                <div>
+                                    <div class="selectTravel__wrapTravel__karta__but--face"></div>
+                                    <div class="selectTravel__wrapTravel__karta__but--faceText">126 spaces left</div>
+                                </div>
+                                <div>
+                                    <div><button>Book Now</button></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="selectTravel__wrapTravel__karta"> <!-- карточка -->
+                            <div class="selectTravel__wrapTravel__karta__title">
+                                <h2>New York Skyline Tour</h2><div><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star05"></span></div>
+                                <h3>The best of New York</h3><p>146 Reviews</p>
+                            </div>
+                            <div class="selectTravel__wrapTravel__karta__img">
+                                <img src="img/location1.jpg" alt="">
+                            </div>
+                            <div class="selectTravel__wrapTravel__karta__text">
+                                <p>
+                                    Take a look at New York from above, the best way
+                                    to see this city. You will find all the classic buildings,
+                                    sights and more plus.
+                                </p>
+                            </div>
+                            <div class="selectTravel__wrapTravel__karta__but">
+                                <div>
+                                    <div class="selectTravel__wrapTravel__karta__but--face"></div>
+                                    <div class="selectTravel__wrapTravel__karta__but--faceText">126 spaces left</div>
+                                </div>
+                                <div>
+                                    <div><button>Book Now</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="selectTravel__wrapTravel__karta"> <!-- карточка -->
+                            <div class="selectTravel__wrapTravel__karta__title">
+                                <h2>New York Skyline Tour</h2><div><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star05"></span></div>
+                                <h3>The best of New York</h3><p>146 Reviews</p>
+                            </div>
+                            <div class="selectTravel__wrapTravel__karta__img">
+                                <img src="img/location2.jpg" alt="">
+                            </div>
+                            <div class="selectTravel__wrapTravel__karta__text">
+                                <p>
+                                    Take a look at New York from above, the best way
+                                    to see this city. You will find all the classic buildings,
+                                    sights and more plus.
+                                </p>
+                            </div>
+                            <div class="selectTravel__wrapTravel__karta__but">
+                                <div>
+                                    <div class="selectTravel__wrapTravel__karta__but--face"></div>
+                                    <div class="selectTravel__wrapTravel__karta__but--faceText">126 spaces left</div>
+                                </div>
+                                <div>
+                                    <div><button>Book Now</button></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="selectTravel__wrapTravel__karta"> <!-- карточка -->
+                            <div class="selectTravel__wrapTravel__karta__title">
+                                <h2>New York Skyline Tour</h2><div><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star05"></span></div>
+                                <h3>The best of New York</h3><p>146 Reviews</p>
+                            </div>
+                            <div class="selectTravel__wrapTravel__karta__img">
+                                <img src="img/location1.jpg" alt="">
+                            </div>
+                            <div class="selectTravel__wrapTravel__karta__text">
+                                <p>
+                                    Take a look at New York from above, the best way
+                                    to see this city. You will find all the classic buildings,
+                                    sights and more plus.
+                                </p>
+                            </div>
+                            <div class="selectTravel__wrapTravel__karta__but">
+                                <div>
+                                    <div class="selectTravel__wrapTravel__karta__but--face"></div>
+                                    <div class="selectTravel__wrapTravel__karta__but--faceText">126 spaces left</div>
+                                </div>
+                                <div>
+                                    <div><button>Book Now</button></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="selectTravel__wrapTravel__karta"> <!-- карточка -->
+                            <div class="selectTravel__wrapTravel__karta__title">
+                                <h2>New York Skyline Tour</h2><div><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star05"></span></div>
+                                <h3>The best of New York</h3><p>146 Reviews</p>
+                            </div>
+                            <div class="selectTravel__wrapTravel__karta__img">
+                                <img src="img/location2.jpg" alt="">
+                            </div>
+                            <div class="selectTravel__wrapTravel__karta__text">
+                                <p>
+                                    Take a look at New York from above, the best way
+                                    to see this city. You will find all the classic buildings,
+                                    sights and more plus.
+                                </p>
+                            </div>
+                            <div class="selectTravel__wrapTravel__karta__but">
+                                <div>
+                                    <div class="selectTravel__wrapTravel__karta__but--face"></div>
+                                    <div class="selectTravel__wrapTravel__karta__but--faceText">126 spaces left</div>
+                                </div>
+                                <div>
+                                    <div><button>Book Now</button></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="selectTravel__wrapTravel__karta"> <!-- карточка -->
+                            <div class="selectTravel__wrapTravel__karta__title">
+                                <h2>New York Skyline Tour</h2><div><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star05"></span></div>
+                                <h3>The best of New York</h3><p>146 Reviews</p>
+                            </div>
+                            <div class="selectTravel__wrapTravel__karta__img">
+                                <img src="img/location3.jpg" alt="">
+                            </div>
+                            <div class="selectTravel__wrapTravel__karta__text">
+                                <p>
+                                    Take a look at New York from above, the best way
+                                    to see this city. You will find all the classic buildings,
+                                    sights and more plus.
+                                </p>
+                            </div>
+                            <div class="selectTravel__wrapTravel__karta__but">
+                                <div>
+                                    <div class="selectTravel__wrapTravel__karta__but--face"></div>
+                                    <div class="selectTravel__wrapTravel__karta__but--faceText">126 spaces left</div>
+                                </div>
+                                <div>
+                                    <div><button>Book Now</button></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
@@ -178,8 +530,11 @@
         
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="js/index.js"></script>
         <script src="js/nav.js"></script>
         <script src="js/header.js"></script>
+        <script src="js/filter.js"></script>
 
         <script src="lib/owl__carusel/owl.carousel.min.js"></script>
         <script src="js/slide1.js"></script>
