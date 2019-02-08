@@ -64,7 +64,7 @@ class RadioBox {
         radioEl.forEach((item)=>{
             item.removeAttribute('checked')
         });
-        box[2].setAttribute('checked', 'checked')
+        box[2].setAttribute('checked', 'checked');
         radioEl.forEach((item)=>{
             if(item.hasAttribute('checked')){
                 let parent = item.parentNode;
@@ -79,11 +79,33 @@ class RadioBox {
 
 }
 
+
+
 let checkBox__1 =  new CheckBox ("checkBox__1", "img/check.jpg", true); // индификатор обложки чекбокса, изображение для чекбокса, изначанльное состояние
 let checkBox__2 =  new CheckBox ("checkBox__2", "img/check.jpg"); 
 
 let radioBox__1 = new RadioBox ("radioBox__1", "img/check.jpg"); // // индификатор обложки радиобокса, изображение для радиокнопок, изначанльное состояние
 let radioBox__2 = new RadioBox ("radioBox__2", "img/check.jpg");
+
+// изменения фона
+const mainContent = document.querySelector('.mainWrap'); // обложка основного контента
+const header = document.querySelector('.header');
+const topSlides = document.getElementById('slides');
+const headerContent = document.querySelector('.header__content');
+
+document.onscroll = function() {
+    let rect = mainContent.getBoundingClientRect();
+    if (rect.top < 0) {
+       // header.style.opacity = '0';
+        topSlides.style.opacity = '0';
+        headerContent.style.opacity = '0';
+    }
+    else {
+      //  header.style.opacity = '1'
+        topSlides.style.opacity = '1'
+        headerContent.style.opacity = '1';
+    }
+  }
 
 $(".polzunok-5").slider({  // range
     min: 20,

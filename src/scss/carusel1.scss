@@ -5,11 +5,13 @@
 .blockCarusel1 {
     width: 100%;
     overflow: hidden;
+    background-color: $colorBg;
     &__wrap {
         width: $view-port;
         display: flex;
         margin: 0 auto;
         height: 594px;
+        
     }
     &__text {
         width: 600px;

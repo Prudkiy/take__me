@@ -22,7 +22,7 @@ $bgcWrapSelectWrap: #D8D8D8;
     justify-content: baseline;
     background-color: $bgcWrapSelectWrap;
     &__filter {
-        width: 230px;
+        width: 268px;
         &__blockSelect {
             width: 100%;
             margin: 0;
@@ -157,12 +157,15 @@ $bgcWrapSelectWrap: #D8D8D8;
         &__karta {
             display: flex;
             flex-direction: column;
-            width: 300px;
+            width: 270px;
             box-sizing: border-box;
             background-color: #ffffff;
             border-radius: 3px;
-            margin: 0 0 15px 15px;
+            margin: 0;
+            margin-bottom: 35px;
+            margin-left: 35px;
             transition: all 0.3s;
+            box-shadow: 0 0 8px #777777;
             &:hover {box-shadow: 0 0 8px #444444;}
             &__title {
                 display: flex;
@@ -175,14 +178,14 @@ $bgcWrapSelectWrap: #D8D8D8;
                 font-size: 14px;
                 padding: 8px 0;
                 h2 {
-                    width: 50%;
+                    width: 60%;
                     display: flex;
                     align-items: flex-end;
                     color: $colorDarkGray;
                     padding-bottom: 2px;
                 }
                 div {
-                    width: 50%;
+                    width: 40%;
                     display: flex;
                     align-items: flex-end;
                     justify-content: flex-end;
@@ -207,19 +210,19 @@ $bgcWrapSelectWrap: #D8D8D8;
                 }
                 }
                 h3 {
-                    width: 50%;
+                    width: 60%;
                     color: $colorDarkGray;
                 }
                 p {
-                    width: 50%;
+                    width: 40%;
                     text-align: right;
                     color: $colorNav;
                 }
             }
             &__img {
-                width: 300px;
+                width: 270px;
                 img {
-                    width: 300px;
+                    width: 270px;
                     height: 100%;
                 }
             }

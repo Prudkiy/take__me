@@ -4,9 +4,14 @@
 
 .bestTravel {
     width: 100%;
-    margin: 55px auto 0;
-    display: flex;
-    justify-content: space-between;
+    padding-top: 55px;
+    background-color: $colorBg;
+    &__wrap {
+        width: $view-port;  
+        display: flex;
+        justify-content: space-between;
+        margin:0 auto;
+    }
     &__block {
         width: 371px;
         display: flex;
