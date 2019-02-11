@@ -1,0 +1,195 @@
+@import "partials/media";
+@import "partials/mixins";
+@import "partials/params";
+
+.reviews {
+    width: 100%;
+    background-color: #fff;
+    &__wrap {
+        margin: 0 auto;
+        padding: 50px 0;
+        display: flex;
+        flex-direction: column;
+        width: $view-port;
+        @include mobile {
+            width: 100%;
+        }
+    }
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        align-items: center;
+        @include mobile {
+            flex-direction: column;
+            justify-content: center;
+        }
+        h2 {
+            color: $colorNav;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 600;
+            @include mobile {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &__select {
+        width: 250px;
+        position: relative;
+        left: -16px;
+        @include mobile {
+            margin-bottom: 30px;
+        }
+        img {
+            display: block;
+            width: 10px;
+            height: 6px;
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            z-index: 101;
+        }
+        input {
+            width: 250px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 600;
+            color: $colorNav;
+            border: 1px solid #cccccc;
+            padding: 0 8px;
+            background-color: #fff;
+            position: relative;
+            z-index: 100;
+            height: 35px;
+        }
+        ul {
+            background-color: #fff;
+            box-sizing: border-box;
+            border: 1px solid #cccccc;
+            border-top: none;
+            top: 35px;
+            z-index: 50;
+            li {
+                padding: 8px;
+                font-family: 'Roboto', sans-serif;
+                color: $colorNav;
+                transition: all 0.2s;
+                &:first-child {
+                    padding-top: 12px;
+                }
+                &:hover {
+                    background-color: $colorBlue;
+                    color: #ffffff;
+                }
+            }
+        }
+        
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+    &__blockReview {
+        width: 100%;
+        border-top: 1px solid $colorPlacenholder;
+        display: flex;
+        align-items: center;
+        height: 130px;
+        @include mobile {
+            height: auto;
+            flex-direction: column;
+            justify-content: center;
+        }
+        &:last-child {
+            border-bottom: 1px solid $colorPlacenholder;
+        }
+        &--img {
+            width: 96px;
+            height: 96px;
+            @include mobile {
+                margin-top: 20px;
+            }
+        }
+        &--des {
+            display: flex;
+            flex-direction: column;
+            margin: 0 90px 0 25px;
+            @include mobile {
+                margin: 0 auto;
+                text-align: center;
+                padding: 20px 0;
+            }
+            h4 {
+                margin-top: 3px;
+            }
+            h3, h4 {
+                display: block;
+                color: $colorNav;
+                font-family: 'Roboto', sans-serif;
+                font-size: 14px;
+            }
+        }
+        &--stars {
+            display: flex;
+            width: 150px;
+            @include mobile {
+                width: 100%;
+                justify-content: center;
+                margin-top: 10px;
+            }
+            span {
+                display: block;
+                width: 18px;
+                height: 18px;
+                margin: 20px 0 0 5px;
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                @include mobile {
+                    margin: 0;
+                }
+                &:first-child {
+                    margin: 20px 0 0 0;
+                    @include mobile {
+                        margin: 0;
+                    }
+                }
+            }
+            .star {        
+                background-image: url('../img/star.png');
+            }
+            .star05 {
+                background-image: url('../img/star0-5.png');
+            }
+        }
+        &--content {
+            @include mobile {
+                width: 90%;
+                padding: 0 5% 20px 5%;
+            }
+            h2, h3 {
+                color: $colorDarkGray;
+                font-family: 'Roboto', sans-serif;
+                font-size: 16px;
+                padding-bottom: 4px;
+                font-weight: 700;
+            }
+            p {
+                color: $colorNav;
+                font-family: 'Roboto', sans-serif;
+                font-size: 14px;
+                font-style: italic;
+                padding-top: 12px;
+                line-height: 18px;
+            }
+        }
+    }
+    &__footer {
+        display: flex;
+        justify-content: center;
+        button {
+            width: 200px;
+            margin: 40px auto 0;
+            @include buttonBlue;
+        }
+    }
+}
+

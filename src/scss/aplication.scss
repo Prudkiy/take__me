@@ -1,0 +1,68 @@
+@import "partials/media";
+@import "partials/mixins";
+@import "partials/params";
+
+.aplication {
+    width: 100%;
+    background-color: #fff;
+    &__wrap {
+        width: $view-port;
+        margin: 0 auto;
+        display: flex;
+        height: 483px;
+        @include mobile {
+            width: 100%;
+            height: auto;
+            flex-direction: column;       
+        }
+    }
+    &__img {
+        width: 284px;
+        background-image: url('../img/aplication.jpg');
+        background-size: 284px 457px;
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        display: flex;
+        @include mobile {
+            display: none;
+            width: 90%;
+            margin: 0 auto;       
+        }
+    }
+    &__text {
+        width: 770px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 115px;
+        @include mobile {
+            width: 90%;
+            margin: 0 auto;       
+        }
+        h4 {
+            color: $colorDarkGray;
+            font-family: 'Roboto', sans-serif;
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 27px;
+            @include mobile {
+                margin-top: 20px;   
+            }
+        }
+        p {
+            color: $colorNav;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            line-height: 20px;
+        }
+        button {
+            width: 271px;
+            margin-top: 45px;
+            @include buttonBlue;
+            @include mobile {
+                width: 100%;
+                margin-bottom: 40px;   
+            }
+        }
+    }
+}

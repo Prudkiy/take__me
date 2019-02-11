@@ -249,18 +249,9 @@ $bgcWrapSelectWrap: #D8D8D8;
                 div:last-child {
                     div {
                         button {
-                            background-color: $colorBlue;
-                            color: #ffffff;
-                            font-size: 18px;
-                            font-family: 'Roboto', sans-serif;
-                            padding: 8px 20px;
-                            border: none;
-                            border-radius: 3px;
-                            cursor: pointer;
-                            transition: all 0.2s;
-                            &:hover {
-                                background-color: $colorBlueRgba1;
-                            }
+                            @include buttonBlue;
+                            width: 150px;
+                            height: 40px;
                         }
                     }
                 }
@@ -275,6 +266,57 @@ $bgcWrapSelectWrap: #D8D8D8;
                     font-family: 'Roboto', sans-serif;
                     color: #A2A2A2;
                 }
+            }
+        }
+    }
+    &__nav {
+        width: 100%;
+        height: 40px;
+        padding: 0;
+        background-color: #ffffff;
+        border-radius: 4px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        img {
+            width: 13px;
+            height: 27px;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+        &__leftNav {
+            width: 13px;
+            height: 27px;
+            position: relative;
+            left: 20px;
+        }
+        &__number {
+            display: flex;
+            justify-content: center;
+            span {
+                font-family: 'Roboto', sans-serif;
+                color: $colorNav;
+                font-size: 14px;
+                margin: 0 8px;
+                cursor: pointer;
+                padding: 4px 6px;
+                box-sizing: border-box;
+            }
+            &--active {
+                border: 1px solid $colorBlue;
+            }
+        }
+        &__rightNav {
+            width: 13px;
+            height: 27px;
+            position: relative;
+            right: 20px;
+            img {
+                transform: rotate(180deg)
             }
         }
     }

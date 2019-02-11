@@ -1,0 +1,21 @@
+@import "partials/media";
+@import "partials/mixins";
+@import "partials/params";
+
+.maps {
+    width: 100%;
+    height: 460px;
+    background-color: #fff;
+    position: relative;
+    box-shadow: 0 6px 6px $colorPlacenholder;
+    @include mobile {
+        height: 100%;
+    }
+    iframe {
+        height: 460px;
+        width: 100%;
+        @include mobile {
+            height: 100%;
+        }
+    }
+}

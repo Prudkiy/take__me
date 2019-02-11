@@ -11,41 +11,56 @@
         display: flex;
         margin: 0 auto;
         height: 594px;
-        
+        @include mobile {
+            width: 90%;
+            height: auto;
+            display: block;
+            text-align: center;
+            padding: 0 5%;
+        }
     }
     &__text {
         width: 600px;
         display: flex;
         align-items: center;
+        @include mobile {
+            display: block;
+            width: 100%;
+        }
         &--wrap {
             display: flex;
             flex-direction: column;
             font-family: 'Sarabun', sans-serif;
+            @include mobile {
+                display: block;
+            }
             h2 {
                 color: #868686;
                 font-size: 48px;
                 font-weight: 700;
                 width: 400px;
                 line-height: 55px;
+                @include mobile {
+                    font-size: 20px;
+                    text-align: center;
+                    width: 100%;
+                }
             }
             h3 {
                 color: #878787;
                 font-size: 16px;
                 padding-top: 45px;
                 line-height: 20px;
+                @include mobile {
+                    padding-top: 20px;
+                }
             }
             button {
+                @include buttonBlue;
                 width: 275px;
-                background-color: $colorBlue;
-                border-radius: 5px;
-                border: none;
-                height: 50px;
-                font-size: 16px;
-                color: #ffffff;
                 margin-top: 50px;
-                transition: all 0.2s;
-                &:hover {
-                    background-color: $colorBlueRgba1;
+                @include mobile {
+                    margin-bottom: 40px;
                 }
             }
         }
@@ -53,6 +68,9 @@
     &__slide {
         width: 100%;
         margin-left: 200px;
+        @include mobile {
+            display: none;
+        }
         .owl-carousel {
             margin-top: 110px;
             .item {

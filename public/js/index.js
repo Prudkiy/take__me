@@ -79,6 +79,78 @@ class RadioBox {
 
 }
 
+class SelectPSI { // select
+
+    constructor (idSelect, idSelectWrap, style='normal') {
+        this.state = false; // состояние селекта (false - закрыто)
+        this.select = document.getElementById(idSelect); // индификтор главной
+        this.mainWrap = document.getElementById(idSelectWrap); // индификатор главной обложки
+        this.option = this.select.querySelectorAll('li'); // список селекта
+        this.optionWrap = this.select.querySelector('ul'); // обложка списка селекта
+        this.input = this.select.querySelector('input'); // выбаное в селекте
+        this.heightOptionWrap = this.optionWrap.clientHeight;
+        if(style === 'normal') { // стили для обычного селекта (список выбора вверх/вниз)
+            this.styleHideWrap = 'selectPSI__hideOption '; // класс, скрыть список
+            this.styleShowWrap = 'selectPSI__showOption '; // класс, показать список
+        }
+
+        let obj = this;
+
+        let arr = [false, obj];
+        this.input.addEventListener('click', this.stateOption.bind(null, arr)); // клик по выбраном селекта
+        
+        this.option.forEach(function(item){
+            let arrOption = [item, obj];
+            item.addEventListener('click', obj.stateOption.bind(null, arrOption)); // клик по елементу в списку выбора
+        });
+
+        this.startPosition ();
+
+    }
+
+    stateOption (arr) { // распределитель
+        let obj = arr[1];
+        let element = arr[0];
+        if (obj.state === false) {
+            obj.showOption(); // показать блок выбора
+            obj.state = true;
+        }
+        else {
+            obj.hideOption(); // скрыть блок выбора
+            obj.state = false;
+        }
+        if(element) {
+            obj.setValueInput(element); // установка текста и значения инпут
+        }
+    }
+
+    hideOption () { // скрыть блок выбора
+        this.optionWrap.setAttribute('class', `custom ${this.styleHideWrap}`); 
+    }
+
+    showOption () { // показать блок выбора
+        this.optionWrap.setAttribute('class', `custom ${this.styleShowWrap}`);
+    }
+
+    setValueInput (element) { // установка текста и значения инпут
+        this.input.setAttribute('value', element.innerHTML);
+    }
+
+    startPosition () {
+        let heightSizeWrapOption = this.optionWrap.clientHeight; // высота блока из списком
+        let heightSizeMainWrap = this.input.getBoundingClientRect(); // высота / ширина инпута
+        this.select.style.height = heightSizeWrapOption + 'px'; // установка высоты обложки списка селекта
+        this.mainWrap.style.height = heightSizeMainWrap.height + 'px'; // установка высоты главной обложки
+        this.optionWrap.style.width = heightSizeMainWrap.width + 'px'; // установка ширини обложки списка селекта
+        this.optionWrap.style.position = 'absolute';
+        this.select.style.position = 'absolute'
+        this.state ? this.showOption() : this.hideOption();
+    }
+
+}
+
+
+
 
 
 let checkBox__1 =  new CheckBox ("checkBox__1", "img/check.jpg", true); // индификатор обложки чекбокса, изображение для чекбокса, изначанльное состояние
@@ -86,6 +158,9 @@ let checkBox__2 =  new CheckBox ("checkBox__2", "img/check.jpg");
 
 let radioBox__1 = new RadioBox ("radioBox__1", "img/check.jpg"); // // индификатор обложки радиобокса, изображение для радиокнопок, изначанльное состояние
 let radioBox__2 = new RadioBox ("radioBox__2", "img/check.jpg");
+
+let select = new SelectPSI ("testSelect1", "testSelect1-wrap");
+
 
 // изменения фона
 const mainContent = document.querySelector('.mainWrap'); // обложка основного контента

@@ -1,0 +1,67 @@
+@import "partials/media";
+@import "partials/mixins";
+@import "partials/params";
+
+.subscibe {
+    width: 100%;
+    background-color: #fff;
+    &__wrap {
+        width: $view-port;
+        background-color: #fff;
+        margin: 0 auto;
+        display: flex;
+        height: 274px;
+        justify-content: space-between;
+        @include mobile {
+            width: 100%;
+            flex-direction: column;
+            height: auto;
+        }
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 700px;
+        @include mobile {
+            width: 100%;
+        }
+        h3 {
+            color: $colorDarkGray;
+            font-family: 'Roboto', sans-serif;
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 27px;
+            @include mobile {
+                font-size: 28px;
+                padding: 0 5%;
+                text-align: center;
+                margin-top: 30px;
+            }
+        }
+        h5 {
+            color: $colorNav;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            line-height: 20px;
+            @include mobile {
+                padding: 0 5%;
+            }
+        }
+    }
+    &__but {
+        flex-wrap: 1;
+        width: 271px;
+        display: flex;
+        align-items: center;
+        @include mobile {
+            width: 90%;
+            margin: 20px auto;       
+        }
+        button {
+            width: 100%;
+            @include buttonBlue;
+        }
+    }
+}

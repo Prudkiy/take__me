@@ -1,0 +1,140 @@
+@import "partials/media";
+@import "partials/mixins";
+@import "partials/params";
+
+.contact {
+    background-color: $colorGray;
+    background-image: url('../img/contact.jpg');
+    background-size: 586px 670px;
+    background-repeat: no-repeat;
+    background-position: top right;
+    width: 100%;
+    box-shadow: 0 0 12px #444444;
+    @include mobile {
+        background-image: none;
+    }
+    &__wrap {
+        width: $view-port;
+        margin: 0 auto;
+        height: 586px;
+        @include mobile {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__content {
+        form {
+            width: 571px;
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 15px;
+            @include mobile {
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+        h3 {
+            color: $colorDarkGray;
+            font-family: 'Roboto', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            padding-top: 40px;
+            @include mobile {
+                font-size: 28px;
+                text-align: center;
+            }
+        }
+    }
+    &__input {
+        width: 273px;
+        margin-top: 20px;
+        @include mobile {
+            width: 90%;
+            padding: 0 5%;
+            margin: 0;
+        }
+        &:nth-child(odd) {
+            margin-right: 25px;
+            @include mobile {
+                margin: 0;
+            }
+        }
+        label {
+            color: $colorNav;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            @include mobile {
+                display: none;
+            }
+        }
+        input {
+            height: 48px;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            width: 243px;
+            margin-top: 13px;
+            padding-left: 30px;
+            border: none;
+            color: $colorNav;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            @include mobile {
+                width: 90%;
+                margin-top: 25px;
+            }
+        }
+    }
+    &__textarea {
+        width: 100%;
+        @include mobile {
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        label {
+            color: $colorNav;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 13px;
+            @include mobile {
+                display: none;
+            }
+        }
+        textarea {
+            width: 511px;
+            height: 80px;
+            resize: none;
+            padding: 13px 30px;
+            color: $colorNav;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            border: none;
+            @include mobile {
+                width: 83%;
+                margin: 0 auto;
+                padding: 13px 8% 0;
+            }
+        }
+    }
+    &__submit {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        @include mobile {
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        input {
+            width: 273px;
+            margin-top: 34px;
+            @include buttonBlue;
+            @include mobile {
+                width: 90%;
+                margin: 40px auto 30px;
+            }
+        }
+    }
+}

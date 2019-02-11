@@ -531,10 +531,259 @@
                         </div>
 
                     </div>
+                </div>   
+                <div class="selectTravel__nav view-port">
+                    <div class="selectTravel__nav__leftNav">
+                        <img src="img/arrow-nav.png" alt="">
+                    </div>
+                    <div class="selectTravel__nav__number">
+                        <span>1</span>
+                        <span class="selectTravel__nav__number--active">2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                        <span>6</span>
+                    </div>
+                    <div class="selectTravel__nav__rightNav">
+                        <img src="img/arrow-nav.png" alt="">
+                    </div>
                 </div>
             </div>
 
+            <!-- reviews -->
+            <div class="reviews">
+                <div class="reviews__wrap">
+                    <div class="reviews__title">
+                        <h2>Reviews (<span>256</span>)</h2>
+                        <div class="reviews__select">
+                            <div class="selectPSI--wrap" id="testSelect1-wrap"> <!-- главная обложка-->
+                                <div class="selectPS" id="testSelect1"> <!-- класс selectPS хранит основные настройки селекта-->
+                                    <img class="selectPS__img" src="img/arrow-down.png" alt="">
+                                    <input type="text" readonly name="testSelect" value="Sort">
+                                    <ul class="custom"> <!-- класс custom для пользовательской настройки, больше классов не дописывать-->
+                                        <li name="value1">lorem 1</li>
+                                        <li name="value2">lorem 2</li>
+                                        <li name="value3">lorem 3</li>
+                                        <li name="value4">lorem 4</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__content">
+                        <div class="reviews__blockReview">
+                            <div class="reviews__blockReview--img"><img src="img/reviews-1.png" alt=""/></div>
+                            <div class="reviews__blockReview--des">
+                                <h3>Anna Marksson</h3>
+                                <h4>Visited <span>Las Vegas</span></h4>
+                                <div class="reviews__blockReview--stars">
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star05"></span>
+                                </div>
+                            </div>
+                            <div class="reviews__blockReview--content">
+                                <h2>We had a  lovely time</h2>
+                                <h3>02.17.2017</h3>
+                                <p>
+                                    "<span>I don’t know where to start. It was simply amazing! From the time we got there to the staff at our hotel, to our Uber driver, to
+the meals at our restaurant, i can’t wait until we visit Las Vegas again!</span>"
+                                </p>
+                            </div>
+                        </div>
+                        <div class="reviews__blockReview">
+                            <div class="reviews__blockReview--img"><img src="img/reviews-2.png" alt=""/></div>
+                            <div class="reviews__blockReview--des">
+                                <h3>Edward Signim</h3>
+                                <h4>Visited <span>Rome</span></h4>
+                                <div class="reviews__blockReview--stars">
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star05"></span>
+                                </div>
+                            </div>
+                            <div class="reviews__blockReview--content">
+                                <h2>Magical Rome!</h2>
+                                <h3>02.16.2017</h3>
+                                <p>
+                                    "<span>Everybody knows how much history this city has, but we were not prepared by just how much it is! At every single corner you
+                                        can find a piece of history that is there for thousands of years. If you didn’t visit, what you are waiting for?</span>"
+                                </p>
+                            </div>
+                        </div>
+                        <div class="reviews__blockReview">
+                            <div class="reviews__blockReview--img"><img src="img/reviews-3.png" alt=""/></div>
+                            <div class="reviews__blockReview--des">
+                                <h3>Jenna Miles</h3>
+                                <h4>Visited <span>Belgrade</span></h4>
+                                <div class="reviews__blockReview--stars">
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star05"></span>
+                                </div>
+                            </div>
+                            <div class="reviews__blockReview--content">
+                                <h2>Where Sava meets Danube</h2>
+                                <h3>02.15.2017</h3>
+                                <p>
+                                    "<span>This city is nothing what i expected. Such a lively place, full of color, wonderful people and fantastic food. Service is lovely and
+                                        my tour guide showed me much more than it was planned, simply because he is amazing at his job! I can’t wait to go back!</span>"
+                                </p>
+                            </div>
+                        </div>
+                        <div class="reviews__blockReview">
+                            <div class="reviews__blockReview--img"><img src="img/reviews-4.png" alt=""/></div>
+                            <div class="reviews__blockReview--des">
+                                <h3>Jonathan Bright</h3>
+                                <h4>Visited <span>Tahiti</span></h4>
+                                <div class="reviews__blockReview--stars">
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                </div>
+                            </div>
+                            <div class="reviews__blockReview--content">
+                                <h2>White sand, blue skies</h2>
+                                <h3>02.14.2017</h3>
+                                <p>
+                                    "<span>When we got there it was raining, but after it stopped, it was lovely! Temperature is pleasant and i loved their free wifi zones.
+                                        If you have, bring your camera because you are going to need it, a lot.</span>"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__footer"><button>Load More</button></div>
+                </div>
             </div>
+
+            <!-- contact us -->
+            <div class="contact">
+                <div class="contact__wrap">
+                    <div class="contact__content">
+                        <h3>Contact Us</h3>
+                        <form action="test.php" method="post">
+                            <div class="contact__input">
+                                <label for="nameUser">First Name</label>
+                                <input type="text" id="nameUser" placeholder="First Name">
+                            </div>
+                            <div class="contact__input">
+                                    <label for="lastNameUser">Last Name</label>
+                                    <input type="text" id="lastNameUser" placeholder="Last Name">
+                            </div>
+                            <div class="contact__input">
+                                    <label for="emailUser">Email</label>
+                                    <input type="text" id="emailUser" placeholder="Email">
+                            </div>
+                            <div class="contact__input">
+                                    <label for="phoneUser">Phone</label>
+                                    <input type="text" id="phoneUser" placeholder="Phone">
+                            </div>
+                            <div class="contact__textarea">
+                                    <label for="messageUser">Message</label>
+                                    <textarea id="messageUser" placeholder="Your message"></textarea>
+                            </div>
+                            <div class="contact__submit">
+                                <input type="submit" value="Send">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- maps -->
+            <div class="maps">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d158808.05335364852!2d-0.7942565476583946!3d51.543311612070354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2spl!4v1549847595850" frameborder="0" style="border:0" allowfullscreen></iframe>
+             </div>
+
+            <!-- subscibe -->
+            <div class="subscibe">
+                <div class="subscibe__wrap">
+                    <div class="subscibe__text">
+                        <h3>Subscribe to our newsletter</h3>
+                        <h5>And receive all the latest news, discounts and updates about the most visited
+                                locations from around the globe, daily.</h5>
+                    </div>
+                    <div class="subscibe__but">
+                        <button>Subscibe</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- aplication -->
+
+            <div class="aplication">
+                <div class="aplication__wrap">
+                    <div class="aplication__img"></div>
+                    <div class="aplication__text">
+                        <h4>Download Our Free App!</h4>
+                        <p>Download our free app and stay up to date with all our latest discounts, articles and reviews. Take a look at
+                                all the world’s top destinations and decide where to spend your perfect vacation.</p>
+                        <button>Download Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <footer class="footer">
+                <div class="footer__wrap">
+                    <div class="footer__blockList">
+                        <h2>Company</h2>
+                        <ul>
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">Carrers</a></li>
+                            <li><a href="">Contact Us</a></li>
+                            <li><a href="">Affiliatest</a></li>
+                            <li><a href="">News</a></li>
+                            <li><a href="">Our App</a></li>
+                            <li><a href="">Site Map</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__blockList">
+                        <h2>Useful links</h2>
+                        <ul>
+                            <li><a href="">Travel Safe</a></li>
+                            <li><a href="">Stay Healthy</a></li>
+                            <li><a href="">Flight Monitor</a></li>
+                            <li><a href="">Booking List</a></li>
+                            <li><a href="">Lost Lugage</a></li>
+                            <li><a href="">World Clock</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__blockList">
+                        <h2>For Companies</h2>
+                        <ul>
+                            <li><a href="">Advertise With Us</a></li>
+                            <li><a href="">How It Works</a></li>
+                            <li><a href="">Pricing Models</a></li>
+                            <li><a href="">VAT Numbers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__blockSocial">
+                        <h2>Stay in Touch</h2>
+                        <form action="" method="POST">
+                            <input type="text" name="subscribe" placeholder="Your Email">
+                            <div class="footer__social">
+                                <div class="footer__social--twitter"></div>
+                                <div class="footer__social--instagram"></div>
+                                <div class="footer__social--facebook"></div>
+                                <div class="footer__social--google"></div>
+                            </div>
+                    </div>
+                    <div class="footer__blockBut">
+                            <h2>&nbsp;</h2>
+                            <input type="submit" value="Subscibe">
+                        </form>
+                    </div>
+                </div>
+            </footer>
+            
+
+            </div> <!-- end main wrap -->
 
         
 
