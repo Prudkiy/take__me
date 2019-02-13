@@ -35,6 +35,9 @@ h1, h2, span {
     margin-top: 100vh;
     background-color: none;
     width: 100%;
+    @include mobile {
+        margin-top: 60px;
+    }
 }
 
 .checkbox {
@@ -150,4 +153,65 @@ h1, h2, span {
         margin-top: 20px;
         left: 8px;
     }
+}
+
+/* select css Serhii Prudkiy */
+
+/* ! необходимо указать высота списка выбора */
+
+@keyframes selectHide {
+    from {
+        height: 100%;
+    } /* укажи реальную высоту */
+    to {
+        height: 0px;
+    }
+}
+@keyframes selectShow {
+    from {
+        height: 0px;
+    }
+    to {
+        height: 100%;
+    } /* укажи реальную высоту */
+}
+
+.selectPS, ul, li, input {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.selectPS {
+    position: relative;
+}
+.selectPSI__hideOption {
+    animation-name: selectHide;
+    animation-duration: 400ms; /* скорость скрытия элементов */
+    animation-timing-function: linear;
+    animation-direction: normal;
+    height: 0px;
+}
+.selectPSI__showOption { /* скорость показа элементов */
+    animation-name: selectShow;
+    animation-duration: 300ms;
+    animation-timing-function: linear;
+    height: 100%; /* укажи реальную высоту */
+}
+.selectPSI--wrap {
+    position: relative;
+}
+.selectPS ul {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.selectPS input {
+    outline: none;
+    cursor: pointer;
+}
+/* остальные стили */
+
+.custom { /* настройки обложки списка выбора, тег ul */
+    display: block;
 }

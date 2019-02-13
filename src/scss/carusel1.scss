@@ -61,6 +61,7 @@
                 margin-top: 50px;
                 @include mobile {
                     margin-bottom: 40px;
+                    margin: 40px auto;
                 }
             }
         }

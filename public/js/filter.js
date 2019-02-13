@@ -1,5 +1,5 @@
 
-const blockSelect = document.querySelectorAll('.selectTravel__filter__blockSelect p');
+const blockSelect = document.querySelectorAll('.select__filter__blockSelect p');
 
 blockSelect.forEach((item)=>{
     let select = item.nextElementSibling;
@@ -15,11 +15,11 @@ function clickBlockSelect (data) {
     let resHide = classEl.indexOf('hide');
     let resShow = classEl.indexOf('show');
     if(resHide > 0){
-        data[1].setAttribute('class', 'selectTravel__filter__blockSelect__punkt show');
+        data[1].setAttribute('class', 'select__filter__blockSelect__punkt show');
         imgArrow.style.transform = 'rotate(180deg)';
     }
     else if(resShow > 0){
-        data[1].setAttribute('class', 'selectTravel__filter__blockSelect__punkt hide');
+        data[1].setAttribute('class', 'select__filter__blockSelect__punkt hide');
         imgArrow.style.transform = 'rotate(0deg)';
     }
 }
